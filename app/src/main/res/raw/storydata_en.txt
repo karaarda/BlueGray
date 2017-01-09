@@ -1,0 +1,216 @@
+::start
+$$nametold=0
+$$shiptold=0
+$$medalliontold=0
+$$trust=1
+$$wenttoship=0
+<<[Connection established]
+<<[Call initiated]
+||launch
+
+::launch
+<<Hello
+<<Is there anyone?
+<<Can you hear me?
+??Yes, I hear||hear
+??Who are you?||whoareyou
+
+::hear
+<<Sonunda birine ulaşabildim
+<<Saatlerdir bu aletle uğraşıyorum
+<<Bir türlü çalıştırmayı başaramamıştım
+??Sen kimsin?||whoareyou
+??Bundan bana ne?||whatmatter
+
+::whoareyou
+$$nametold=1
+<<Sanırım önce bununla başlamalıydım
+<<Benim adım Hasan
+<<Ekibimle batık bir gemiye dalış yaparken bir anda kendimi burada buldum
+--medalliontold=0
+$$medalliontold=1
+<<Ve yanımda bu telsiz ve uyanınca bulduğum bir madalyon dışında hiçbir şey yok
+<<Bana yardım etmelisin
+--
+??Nerede olduğunu bilmiyor musun?||whereareyou
+??Sakin ol ve bana gemiden bahset||telltheship
+
+::whatmatter
+$$medalliontold=1
+<<Senden başka ulaşabileceğim kimse yok
+<<Yanımda sadece bu telsiz ve kıyıda bulduğum bir madalyon var
+<<Bana yardım etmek zorundasın
+??Tamam ama sen de kimsin?||whoareyou
+??Sen kendinde misin?||areyouhigh
+
+::areyouhigh
+$$nametold=1
+<<Kendimi anlatamadım sanırım
+<<Şu an şaka yapmıyorum
+<<Bak, baştan anlatacağım
+<<Adım Hasan ve en son hatırladığım şey...
+<<...ekibimle batık bir gemiye dalış yaptığımız
+<<Uyandığımda kendimi burada buldum
+<<Saatlerdir birine ulaşmaya çalışıyorum ve ulaşabildiğim tek insan sensin
+??Nerede olduğunu bilmiyor musun yani?||whereareyou
+??Tamam sakin ol ve bana şu gemiden bahset||telltheship
+
+::telltheship
+$$shiptold=1
+<<1700lerde battığı tahmin edilen bir gemi
+<<Ekibimle uzun süredir bu tür dalışlar yapıyoruz
+<<Batık gemilere girip gemiyi ve batış sebebini inceliyoruz
+<<Aslına bakarsan ileride demir atmış bir gemi var...
+<<...ve 1700lerden kalmış gibi duruyor
+??Peki nerede olduğuna dair bir fikrin var mı?||whereareyou
+??Gemide ne arıyordunuz?||whatyousearch
+
+::whereareyou
+<<Nerede olduğuma dair hiçbir fikrim yok
+--shiptold=1
+<<İleride bahsettiğim gemi, dağın eteklerindeyse bir köy var
+--
+--shiptold=0
+<<İleride demir atmış bir gemi...
+<<...dağın eteklerindeyse bir köy var
+<<Gemi araştırmak için dalış yaptığımız gemiye çok benziyor
+--
+<<Hava kararıyor dostum
+<<Sence hangi tarafa doğru gitmeliyim?
+??Köye gitmek mantıklı görünüyor, belki yardımcı olacak birini bulabilirsin||gotovillage
+??Gemiye doğru yol al, belki ekibindeki diğer insanları bulabilirsin||gotoship
+
+::gotovillage
+--wenttoship=1
+<<Bu adamlar sorun çıkaracak gibi görünüyor
+--
+<<Sana güveniyorum
+<<Köye vardığımda haber vereceğim
+++30m||arrivevillage
+
+::gotoship
+<<Biraz ürkütücü bir fikir ama sana güveniyorum
+<<Gemiye vardığımda haber vereceğim
+++30m||arriveship
+
+::arriveship
+<<Ne gördüğüme inanmayacaksın
+<<Sahilde, geminin yakınında, korsanlar var
+<<Yani filmlerde gördüklerimiz gibi
+<<Nereye geldim ben böyle
+<<Neler oluyor burada
+??Bilemiyorum, belki "korsanlarla" konuşmayı deneyebilirsin||talktopirates
+??Oradan uzaklaşsan iyi olabilir, belki de köye dönmek daha iyi bir fikirdir.||gotovillage
+
+::talktopirates
+<<Ne dediğinin farkında mısın?
+<<Bu adamların 	benimle dostça konuşacağını mı sanıyorsun
+<<Beni hayatta tutmak istediğine emin misin?
+??Sakin ol biraz, senin gördüklerini ben göremiyorum||notinyourpov
+??Biliyor musun, bence delinin tekisin||youarecrazy
+
+::notinyourpov
+<<Evet
+<<Haklısın
+<<Özür dilerim
+<<Ancak bütün bu olanlar...
+<<Ne olduğunu hatırlamamam...
+<<Bulduğum o madalyon...
+<<Gerçekten hepsi çok anlamsız
+<<Bir anda kendimi bilinmezlerin ortasında buldum
+<<Ve tanımadığım birinden yardım bekliyorum
+++5m||bettergovillage
+
+::bettergovillage
+<<Afedersin, öyle demek istemedim ancak
+<<Bilmiyorum
+<<Anla işte
+<<Köye döndüğümde konuşsak daha iyi olabilir
+<<Yola çıkıyorum
+++15m||arrivevillage
+
+::youarecrazy
+<<Deli mi? Ciddi misin?
+<<Tüm bunları uydurduğumu mu sanıyorsun?
+<<Bana yardım edebilecek tek insan sensin ve sen de bana deli diyorsun
+<<Harika, gerçekten
+<<Daha önce hiç bu kadar iyi hissetmemiştim
+<<Zaten sana ihtiyacım olduğunu nereden çıkardım ki
+<<Kendi başımın çaresine bakarım
+++30m||end_
+
+::arrivevillage
+<<Köye vardım
+<<Ancak insanlar pek dost canlısı gözükmüyor
+<<Ve geleneklerine bağlı olmalılar ki üstlerindeki kıyafetler 500 yıllık gibi duruyor
+<<Burada tuhaf bir şeyler var dostum
+<<Köyün meydanına doğru ilerliyorum oraya vardığımda haber vereceğim
+++5m||arrivevillagecentre
+
+::arrivevillagecentre
+<<Meydana vardım ancak buradaki yaşlı bir adam uzun süredir beni beklediğini...
+<<...bana anlatacak önemli şeyleri olduğunu söyledi
+<<Garip hareketleri var, onunla gitmeden önce tavernaya gitsem iyi olabilir
+??Bence de, önce tavernaya uğra||gototavern
+??Bu adama bir şans versen iyi olabilir||gowithelder
+
+::gototavern
+<<Umarım başım belaya girmez
+<<Birazdan tavernada olurum
+++5m||arrivetavern
+
+::gowithelder
+<<Yaşlı adam beni evine davet ediyor
+<<Onunla evine doğru gidiyorum
+<<Gittiğimde görüşürüz
+++40m||arriveeldershouse
+
+::arriveeldershouse
+<<Bu adam delirmiş olmalılar
+<<Gerçekten
+<<Bana yarım saattir zaman yolculuğu yaptığımdan aslında aynı kaderi paylaştığımızdan
+<<Kısacası saçma sapan şeylerden bahsedip duruyor
+<<Söylediklerinin hiçbir anlamı yok
+<<Bana yardım etmek zorundasın dostum
+<<Buradan hemen kurtulmak istiyorum
+??Sakin ol ve biraz olgun davran||bemature
+??Evet biraz saçma geliyor olabilir ama belki de haklıdır||mayberight
+
+::mayberight
+<<Bilmiyorum dostum
+<<Söyledikleri çok anlamsız
+<<Nasıl zamanda yolculuk yapmış olabilirim
+<<Bunun mümkün olmadığını ikimiz de biliyoruz
+<<Öte yandan adada dilimizi bile bir tek o varmış gibi duruyor
+<<Bütün bunlara bir anlam veremiyorum
+<<En iyisi yatacak bir yer bulup bu işi yarına bırakmak
+??Yaşlı adamın yanında kalmaya ne dersin?||staywithelder
+??Ormanda mutlaka kalacak bir ağaç kovuğu bulabilirsin||stayinwoods
+
+::bemature
+<<Söz konusu olanın ne olduğunun farkında değilsin sanırım
+<<Kim olduğunu bilmediğim insanların arasında...
+<<...nerede olduğumu bilmeden bir gün geçirdim
+<<Ve sen bana olgun davranmamı mı söylüyorsun?
+<<Yardım edecek misin yoksa sürekli bir şeyleri mi eleştireceksin?
+<<Hava karardı kalacak bir yerim dahi yok
+??Yaşlı adamın yanında kalmaya ne dersin?||staywithelder
+??Ormanda mutlaka kalacak bir ağaç kovuğu bulabilirsin||stayinwoods
+
+::stayinwoods
+<<Bunun iyi bir fikir olduğuna emin misin?
+<<Hava karardı ve ormana dair hiçbir şey bilmiyorum
+??Bir delinin yanında kalmaktansa neden olmasın?||gowoods
+??Haklısın belki de yaşlı adamla kalmalısın||staywithelder
+
+::gowoods
+<<Umarım şansım yaver gider ve sabah olduğunda sana ulaşabilecek durumda olurum
+<<Yoksa bu işin sonu pek iyi gözükmüyor
+++120m||dawnofday1_forest
+
+::staywithelder
+<<Burada kalmaktan başka şansım yok gibi görünüyor
+<<Yine de hala endişeleniyorum
+<<Sabah olduğunda burada olursun umarım
+<<Uyandığımda görüşürüz
+++120m||dawnofday1_elder

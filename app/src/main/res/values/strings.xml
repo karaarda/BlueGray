@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Blue Gray</string>
+    <string name="app_name_all_caps">MAVİ GRİ</string>
+    <string name="ver">s1.0</string>
+    <string name="dev_name">Pinq Yazılım</string>
+    <string name="programming">Yazılım</string>
+    <string name="arda">Arda Kara</string>
+    <string name="writer">Yazan</string>
+    <string name="doga">Doğa Kale</string>
+    <string name="welfare">Refah Arttırıcı</string>
+    <string name="hakan">Hakan Yimsek</string>
+    <string name="reset">İlerlemeyi Sıfırla</string>
+    <string name="other">Diğer uygulamalarımız</string>
+    <string name="busy">[Hasan meşgul]</string>
+    <string name="new_nof">Yeni mesajları kontrol et!</string>
+    <string name="nof_settings">Bildirim Seçenekleri</string>
+    <string name="change_lang">Dili Değiştir</string>
+    <string name="rate_game">Puan Ver</string>
+    <string name="credits">Geliştiren</string>
+    <string name="credits_text">Mavi-Gri\n\nGeliştiren:\nArda Kara\n\nÇeviri:\nArda Kara</string>
+    <string name="chooseLang">Bir dil seçin:</string>
+    <string name="english">English</string>
+    <string name="german">Deutsch</string>
+    <string name="turkish">Türkçe</string>
+    <string name="azerbaijani">Azərbaycanca</string>
+</resources>

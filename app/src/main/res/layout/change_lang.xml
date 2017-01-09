@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/paperbackground"
+    android:foreground="@drawable/border"
+    android:id="@+id/root"
+    android:padding="50dp"
+    android:baselineAligned="false">
+
+    <TextView
+        android:gravity="center"
+        android:text="@string/chooseLang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:text="@string/english"
+        android:textAlignment="center"
+        android:padding="5dp"
+        android:layout_weight="1"
+        android:textSize="12sp"
+        android:typeface="monospace"
+        android:id="@+id/english"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:background="@drawable/button_selector"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:text="@string/german"
+        android:textAlignment="center"
+        android:padding="5dp"
+        android:layout_weight="1"
+        android:textSize="12sp"
+        android:typeface="monospace"
+        android:id="@+id/german"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:background="@drawable/button_selector"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:text="@string/turkish"
+        android:textAlignment="center"
+        android:padding="5dp"
+        android:layout_weight="1"
+        android:textSize="12sp"
+        android:typeface="monospace"
+        android:id="@+id/turkish"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:background="@drawable/button_selector"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:text="@string/azerbaijani"
+        android:textAlignment="center"
+        android:padding="5dp"
+        android:layout_weight="1"
+        android:textSize="12sp"
+        android:typeface="monospace"
+        android:id="@+id/azerbaijani"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:background="@drawable/button_selector"
+        android:textAllCaps="false"/>
+
+</LinearLayout>
