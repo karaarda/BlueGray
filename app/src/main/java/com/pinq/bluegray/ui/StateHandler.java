@@ -104,6 +104,8 @@ public class StateHandler {
 
                 Log.e("if", values1[0] + " is " + values1[1]);
 
+                Log.e("Variables", mState.mVariables.toString());
+
                 if(mState.mVariables.get(values1[0]).equals(values1[1])){
                     int k = i;
 

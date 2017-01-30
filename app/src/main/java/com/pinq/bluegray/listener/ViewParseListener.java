@@ -17,6 +17,8 @@ import com.pinq.bluegray.data.Message;
 import com.pinq.bluegray.data.PreferenceHandler;
 import com.pinq.bluegray.data.State;
 
+import java.util.HashMap;
+
 /**
  * Created by Arda on 8.01.2017.
  */
@@ -61,15 +63,16 @@ public class ViewParseListener implements ParseListener{
         delayState.mRaw = "::" + delayState.mName + "\n<<" + mContext.getString(R.string.busy);
         delayState.mDueDate = System.currentTimeMillis() + delay;
         delayState.mDelayedNextState = delayData[1];
+        delayState.mVariables = (HashMap<String, String>) mState.mVariables.clone();
 
         Intent intent = new Intent(mContext, NotificationService.class);
         PendingIntent pintent = PendingIntent.getService(mContext, 0, intent, 0);
 
         AlarmManager alarm = (AlarmManager) mContext.getSystemService(Context.ALARM_SERVICE);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            alarm.setExact(AlarmManager.RTC, System.currentTimeMillis() + 1000 * 10, pintent);
+            alarm.setExact(AlarmManager.RTC, delayState.mDueDate, pintent); //TODO change second argument for debugging
         } else {
-            alarm.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + 1000 * 10, pintent);
+            alarm.set(AlarmManager.RTC_WAKEUP, delayState.mDueDate, pintent);
         }
 
         mState.mNextState = delayState.mName;

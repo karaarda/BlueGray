@@ -4,213 +4,707 @@ $$shiptold=0
 $$medalliontold=0
 $$trust=1
 $$wenttoship=0
+$$angeraboutjoke=0
+$$changedclothes=0
+$$eldertoldeverything=0
+$$shinningmedallion=0
+$$toldelderaboutmedallion=0
 <<[Bağlantı kuruluyor]
 <<[Çağrı başlatılıyor]
 ||launch
 
 ::launch
-<<Merhaba
+<<Hey!
+<<...
+<<Heey!
+<<...
+<<...
 <<Orada kimse var mı?
 <<Beni duyabiliyor musunuz?
-??Evet, duyuyorum||hear
+??Evet, duyuyorum.||hear
 ??Sen de kimsin?||whoareyou
 
 ::hear
-<<Sonunda birine ulaşabildim
-<<Saatlerdir bu aletle uğraşıyorum
-<<Bir türlü çalıştırmayı başaramamıştım
+<<Sonunda birine ulaşabildim.
+<<Saatlerdir bu aletle uğraşıyorum.
+<<Bir türlü birine ulaşmayı başaramadım.
 ??Sen kimsin?||whoareyou
 ??Bundan bana ne?||whatmatter
 
 ::whoareyou
 $$nametold=1
-<<Sanırım önce bununla başlamalıydım
-<<Benim adım Hasan
-<<Ekibimle batık bir gemiye dalış yaparken bir anda kendimi burada buldum
+<<Sanırım önce bununla başlamalıydım.
+<<Benim adım Hasan.
+<<Ekibimle batık bir gemide araştırma yapıyorduk.
+<<Sonra bir anda gözüm karardı...
+<<...ve kendimi burada buldum.
 --medalliontold=0
 $$medalliontold=1
-<<Ve yanımda bu telsiz ve uyanınca bulduğum bir madalyon dışında hiçbir şey yok
-<<Bana yardım etmelisin
+<<Yanımda bu telsiz ve uyanınca bulduğum bir madalyon dışında hiçbir şey yok.
 --
+<<Bayılmış olmalıyım ancak tüm hepsinin bir kaç saniye içinde gerçekleştiğine yemin edebilirim.
+<<Daha önce hiç böyle bir şey yaşamamıştım.
 ??Nerede olduğunu bilmiyor musun?||whereareyou
 ??Sakin ol ve bana gemiden bahset||telltheship
 
 ::whatmatter
 $$medalliontold=1
-<<Senden başka ulaşabileceğim kimse yok
-<<Yanımda sadece bu telsiz ve kıyıda bulduğum bir madalyon var
-<<Bana yardım etmek zorundasın
+<<Saatlerdir uğraşıyorum ve bir tek sana ulaşabildim.
+<<Yanımda sadece bu telsiz ve kıyıda bulduğum bir madalyon var.
+<<Ne yapmam gerektiğine dair hiçbir fikrim yok.
+<<Ve inan bana, bana yardım edebilecek tek kişi sensin.
 ??Tamam ama sen de kimsin?||whoareyou
 ??Sen kendinde misin?||areyouhigh
 
 ::areyouhigh
 $$nametold=1
-<<Kendimi anlatamadım sanırım
-<<Şu an şaka yapmıyorum
-<<Bak, baştan anlatacağım
+<<Kendimi anlatamadım sanırım.
+<<Şu an şaka yapmıyorum.
+<<Tamam, saçma geliyor olabilir evet ama yardıma ihtiyacım var.
+<<Bak, baştan anlatacağım.
 <<Adım Hasan ve en son hatırladığım şey...
-<<...ekibimle batık bir gemiye dalış yaptığımız
-<<Uyandığımda kendimi burada buldum
-<<Saatlerdir birine ulaşmaya çalışıyorum ve ulaşabildiğim tek insan sensin
-??Nerede olduğunu bilmiyor musun yani?||whereareyou
-??Tamam sakin ol ve bana şu gemiden bahset||telltheship
+<<...ekibimle batık bir gemiye dalış yaptığımız.
+<<Dalış sırasında gözüm karardı ve kendimi bir anda burada buldum.
+<<Biliyorum bana da mantıksız geliyor tüm bu olanlar.
+<<Ancak saatlerdir birine ulaşmaya çalışıyorum ve ulaşabildiğim tek insan sensin.
+??Nerede olduğunu bilmiyor musun?||whereareyou
+??Bana şu gemiden bahset.||telltheship
 
 ::telltheship
 $$shiptold=1
-<<1700lerde battığı tahmin edilen bir gemi
-<<Ekibimle uzun süredir bu tür dalışlar yapıyoruz
-<<Batık gemilere girip gemiyi ve batış sebebini inceliyoruz
-<<Aslına bakarsan ileride demir atmış bir gemi var...
-<<...ve 1700lerden kalmış gibi duruyor
+<<1700lerde battığı bilinen bir gemi.
+<<Değerli şeyler bulabilmek umuduyla ekibimle uzun süredir bu tür dalışlar yapıyoruz.
+<<Batık gemilere girip gemiyi araştırıyoruz ve değerli gördüğümüz şeyleri topluyoruz.
+<<Şimdiye kadar pek başarılı olduğumuz söylenemez tabii.
+<<Aslına bakarsan...
+<<kıyıda demir atmış bir gemi var ve 1700lerden kalmış gibi duruyor...
+<<hatta dalış yaptığımız gemiyle aynı diyebilirim.
 ??Peki nerede olduğuna dair bir fikrin var mı?||whereareyou
-??Gemide ne arıyordunuz?||whatyousearch
+??Bu gemide ne arıyordunuz?||whatyousearch
+
+::whatyousearch
+<<Başka bir gemide bulduğumuz bulgular doğrultusunda teknolojik bir aletin izini sürüyoruz.
+<<...
+<<Tam olarak ne işe yaradığını bilmiyoruz.
+<<Ancak değerli olabileceğini düşünüyorduk.
+??Şu an nerede olduğuna dair bir fikrin var mı?||whereareyou
+??Ekibin nerede?||whereisyourcrew
+
+::whereisyourcrew
+<<Hiçbir fikrim yok.
+<<Dalışı üç kişi gerçekleştirdik ancak uyandığımda tek başımaydım.
+<<Büyük ihtimalle beni aramaya çıkmışlardır ancak ne zamana bulurlar emin değilim.
+<<Nerede olduğumu çözebilirsem belki ben onlara ulaşabilirim.
+<<Ancak o da pek mümkün durmuyor.
+||whereareyou
 
 ::whereareyou
-<<Nerede olduğuma dair hiçbir fikrim yok
+<<Dalış yaptığımız gemi Cebelitarık açıklarındaydı ancak şu an nerede olduğuma dair bir fikrim yok.
 --shiptold=1
 <<İleride bahsettiğim gemi, dağın eteklerindeyse bir köy var
 --
 --shiptold=0
+$$shiptold=1
 <<İleride demir atmış bir gemi...
-<<...dağın eteklerindeyse bir köy var
-<<Gemi araştırmak için dalış yaptığımız gemiye çok benziyor
+<<...dağın eteklerindeyse bir köy var.
+<<Gemi araştırmak için dalış yaptığımız gemiye çok benziyor.
 --
-<<Hava kararıyor dostum
+<<Bir kaç saat içinde hava kararacak dostum.
+<<Bir yerlere doğru ilerlesem iyi olacak, geceyi burada geçirmek istediğimi sanmıyorum.
+<<Gemiye gidersem belki ekibimdeki diğer insanları bulabilirim.
+<<Öte yandan köyde bana yardım edecek birilerini bulmam muhtemel.
 <<Sence hangi tarafa doğru gitmeliyim?
-??Köye gitmek mantıklı görünüyor, belki yardımcı olacak birini bulabilirsin||gotovillage
-??Gemiye doğru yol al, belki ekibindeki diğer insanları bulabilirsin||gotoship
+??Köye gitmek mantıklı görünüyor||gotovillage
+??Gemiye doğru yol al||gotoship
 
 ::gotovillage
 --wenttoship=1
-<<Bu adamlar sorun çıkaracak gibi görünüyor
+<<Ekiptekilerin orada olmadıklarını umuyorum. Eğer oradalarsa onları orada bırakmak iyi bir fikir mi?
+<<Orada olsam da yardımcı olamazdım gerçi değil mi?
+<<Tamam, haklısın.
 --
-<<Sana güveniyorum
-<<Köye vardığımda haber vereceğim
-++30m||arrivevillage
+<<Sana güveniyorum.
+<<Köye vardığımda haber vereceğim.
+++15m||goingtovillage
+
+::goingtovillage
+--angeraboutjoke=1
+<<Biraz gereksiz tepki verdim sanırım.
+<<Daha sakin olsam iyi olacak, ancak kendimi izlediğimiz filmlerden birinin içinde bulunca duruma alışmak biraz zor oldu.
+--
+<<Aslına bakarsan bulunduğum yer fazlasıyla güzel.
+<<Neler olup bittiğini öğrendikten sonra bunu bir tatil olarak değerlendirebilirim.
+<<Tabii hayatta olursam.
+++20m||arrivevillage
 
 ::gotoship
-<<Biraz ürkütücü bir fikir ama sana güveniyorum
-<<Gemiye vardığımda haber vereceğim
-++30m||arriveship
+<<Tamam, hemen yola çıkıyorum ancak haberin olsun gemi epey uzakta.
+<<Oraya vardığımda haber vereceğim.
+++15m||goingtoship
+
+::goingtoship
+<<Biliyor musun, dalış kıyafetleri içerisinde dakikalarca yürümek pek de mantıklı değilmiş.
+<<Ancak başka bir yere gitme fikri benimdi değil mi?
+<<Her neyse, yola devam etsem iyi olacak.
+<<Zaten başka şansım da yok gibi.
+++20m||arriveship
 
 ::arriveship
-<<Ne gördüğüme inanmayacaksın
-<<Sahilde, geminin yakınında, korsanlar var
-<<Yani filmlerde gördüklerimiz gibi
-<<Nereye geldim ben böyle
-<<Neler oluyor burada
-??Bilemiyorum, belki "korsanlarla" konuşmayı deneyebilirsin||talktopirates
-??Oradan uzaklaşsan iyi olabilir, belki de köye dönmek daha iyi bir fikirdir.||gotovillage
+$$wenttoship=1
+<<Ne gördüğüme inanmayacaksın.
+<<Güvertede bir çok asker var ve hepsi üniformalı.
+<<Garip kısmı ise üniformaları çağımızdan çok eski duruyor ve ellerinde 200 yıllık tüfekler var.
+<<Yani filmlerde gördüklerimiz gibi.
+<<Nereye geldim ben böyle? Neler oluyor burada?
+<<Şimdi ne yapacağım? Köye dönmek için çok mu geç?
+??"Askerlerle" konuşmayı deneyebilirsin||talktosoldiers
+??Köye dönmek iyi bir fikir.||gotovillage
 
-::talktopirates
+::talktosoldiers
 <<Ne dediğinin farkında mısın?
-<<Bu adamların 	benimle dostça konuşacağını mı sanıyorsun
-<<Beni hayatta tutmak istediğine emin misin?
-??Sakin ol biraz, senin gördüklerini ben göremiyorum||notinyourpov
-??Biliyor musun, bence delinin tekisin||youarecrazy
+<<Bu adamlar benimle dostça konuşacak gibi durmuyor ve oraya gitmeye pek de niyetim yok.
+??Seninle aynı şeyleri göremiyorum.||notinyourpov
+??Şakaydı||itisajoke
 
 ::notinyourpov
-<<Evet
-<<Haklısın
-<<Özür dilerim
-<<Ancak bütün bu olanlar...
-<<Ne olduğunu hatırlamamam...
+<<Evet.
+<<Haklısın.
+<<Ancak durumun ciddiyetini anlamak için burada olman ve tüm bunları görmene gerek yok.
+<<Yine de özür dilerim.
+<<Bütün bu olanlar...
+<<Kendimi birden başka bir yerde bulmam...
 <<Bulduğum o madalyon...
-<<Gerçekten hepsi çok anlamsız
-<<Bir anda kendimi bilinmezlerin ortasında buldum
-<<Ve tanımadığım birinden yardım bekliyorum
+<<Gerçekten hepsi çok anlamsız.
+<<Bir anda kendimi bilinmezlerin ortasında buldum.
+<<Ve tanımadığım birinden yardım bekliyorum.
 ++5m||bettergovillage
 
 ::bettergovillage
-<<Afedersin, öyle demek istemedim ancak
-<<Bilmiyorum
-<<Anla işte
-<<Köye döndüğümde konuşsak daha iyi olabilir
-<<Yola çıkıyorum
+<<Afedersin, öyle demek istemedim ancak...
+<<...bilmiyorum.
+<<Anla işte.
+<<Köye döndüğümde konuşsak daha iyi olabilir.
+<<Yola çıkıyorum.
 ++15m||arrivevillage
 
-::youarecrazy
-<<Deli mi? Ciddi misin?
-<<Tüm bunları uydurduğumu mu sanıyorsun?
-<<Bana yardım edebilecek tek insan sensin ve sen de bana deli diyorsun
-<<Harika, gerçekten
-<<Daha önce hiç bu kadar iyi hissetmemiştim
-<<Zaten sana ihtiyacım olduğunu nereden çıkardım ki
-<<Kendi başımın çaresine bakarım
-++30m||end_
+::itisajoke
+$$angeraboutjoke=1
+<<Komik olmadığını fark etmişsindir umarım.
+<<Pek de şaka yapılacak bir durumda olduğumu sanmıyorum.
+<<Her neyse, köye dönüyorum. Umarım orada bir şeyler bulabilirim.
+++20m||goingtovillage
 
 ::arrivevillage
 <<Köye vardım
-<<Ancak insanlar pek dost canlısı gözükmüyor
-<<Ve geleneklerine bağlı olmalılar ki üstlerindeki kıyafetler 500 yıllık gibi duruyor
-<<Burada tuhaf bir şeyler var dostum
-<<Köyün meydanına doğru ilerliyorum oraya vardığımda haber vereceğim
+<<Ancak insanlar pek dost canlısı gözükmüyor.
+<<Ve geleneklerine bağlı olmalılar ki üstlerindeki kıyafetler 500 yıllık gibi duruyor.
+<<Burada tuhaf bir şeyler var dostum.
+<<Üstümdeki kıyafetlerle içlerine girmek pek makul gelmedi doğrusu.
+<<Sence gizlice üstüme giyecek bir şeyler bulmayı denemeli miyim?
+??Üstündekilerle git.||gowithdivingsuit
+??Yeni kıyafetler bul.||gofindclothes
+
+::gowithdivingclothes
+<<Öylese köy meydanına doğru ilerliyorum.
+<<Bakalım neler olacak.
+++5m||villagersareweird
+
+::gofindclothes
+<<Pek bir şey bekleme ama elimden geleni yapacağım.
+<<Umarım birilerinin bahçesinden kıyafet ödünç alırken yakalanmam.
+++15m||foundclothes
+
+::foundclothes
+$$changedclothes=1
+<<Gariptir ki bugün ilk kez şansım yaver gitti ve yakındaki bir evin bahçesinden bir kaç giyecek aldım.
+<<Pek yakıştığı söylenemez ama dalış kıyafetlerinden iyidir değil mi?
+<<Köyü inceleyip etrafta dolanmamak için bir mazeretim kalmadı gibi duruyor.
+<<Bir şeyler bulursam haber veririm.
+++5m||villagersareweird
+
+::villagersareweird
+<<Iıı...
+<<Şöyle ki...
+--changedclothes=1
+<<Kılık değiştirmek pek işe yaramamış gibi duruyor.
+<<Herkesin göz ucuyla beni izlediğine eminim.
+--
+--changedclothes=0
+<<Kılık değiştirsem daha iyi olabilirdi.
+<<Herkes kafasını çevirip bana bakıyor.
+--
+<<Buradan hemen uzaklaşsam iyi olacak.
 ++5m||arrivevillagecentre
 
 ::arrivevillagecentre
-<<Meydana vardım ancak buradaki yaşlı bir adam uzun süredir beni beklediğini...
-<<...bana anlatacak önemli şeyleri olduğunu söyledi
-<<Garip hareketleri var, onunla gitmeden önce tavernaya gitsem iyi olabilir
-??Bence de, önce tavernaya uğra||gototavern
-??Bu adama bir şans versen iyi olabilir||gowithelder
+<<Meydana vardım ancak buradaki kalabalık pek dost canlısı değil.
+<<Gittikçe de sayıları artıyor gibi.
+<<Onlarla aynı dili konuşamıyoruz bile, nasıl derdimi anlatacağım?
+<<Fazlasıyla meraklı ve ürkmüş duruyorlar.
+<<Hey, bir dakika...
+++10m||eldershown
 
-::gototavern
-<<Umarım başım belaya girmez
-<<Birazdan tavernada olurum
-++5m||arrivetavern
+::eldershown
+<<Az önce olanlara inanmayacaksın.
+<<Kalabalığın içinden yaşlı bir adam sıyrılarak beni kenara çekti.
+<<Diğerlerinin aksine dilimizi konuşuyor ve aşırı paniklemiş bir hali var.
+<<Burada olmamam gerektiği, kendisiyle gitmem gerektiği gibi şeyler söyledi.
+--changedclothes=1
+<<Seninle konuştuğumu anladığını sanmıyorum, üzerimi değiştirmem için bir şeyler verdi ve kıyafetlerimi değiştirmemi bekliyor.
+--
+--changedclothes=0
+<<Seninle konuştuğumu anladığını sanmıyorum, köylülere bir şeyler anlatmakla meşgul.
+--
+<<Sence bu adama güvenmeli miyim?
+??Evet, yaşlı adamla git.||gowithelder
+??Hayır, bir yolunu bul ve kaç.||escapefromelder
+
+::escapefromelder
+<<Güzel, iyi fikir ancak köyde kalabileceğimi sanmıyorum.
+<<Gidilebilecek tek yer ormanmış gibi duruyor.
+<<Ormanda güvenli bir yerler bulduğumda haber ederim.
+++30m||safeinwoods
+
+::safeinwoods
+--eldertoldeverything=0
+<<Köyden yeterince uzakta ve güvende olduğumu varsayarsak,
+<<ve güneşin batmasına pek bir vakit kalmadığını göz önünde bulundurursak,
+--
+--eldertoldeverything=1
+<<Yaşlı adamdan yeterince uzaklaştığımı varsayarsak,
+<<ve havanın çoktan karardığını göz önünde bulundurursak,
+--
+<<inanıyorum ki geceyi geçirecek bir yer arayışına girmenin tam vakti.
+<<Etrafı inceleyip sana en lüks ve konforlu seçenekleri sunacağım.
+++20m||foundhideouts
+
+::foundhideouts
+<<Pekala, üzülerek söylüyorum ki kalacak yer açısından pek seçeneğim yok.
+<<İçine sığabileceğim bir ağaç kovuğunun yanında dikiliyorum.
+<<Dağın yamacında ise bir mağara gözüküyor.
+<<Ne kadar güvenlidir bilemiyorum ama buradan konforlu olacağı kesin.
+<<Hem belki oradan gemiyi izleme imkanım olabilir.
+??Kovukta kal.||stayincavity
+??Mağaraya git.||stayincave
+
+::stayincavity
+<<Bu kararı buranın mağaradan güvenli olduğunu düşünerek verdiğine inanmak istiyorum.
+<<Sabah olduğunda güvenlik tanımımızı gözden geçirmek zorunda kalmazsak iyi olur.
+<<Sana rahat ve sıcak evinde iyi geceler. Ben de bu küçük kovuğun tadını çıkarayım.
+<<Yarın görüşürüz.
+++360m||day2_cavity
+
+::stayincave
+<<Konforun benim dışında birileri için de önemli olduğunu biliyordum.
+<<Biraz yorucu bir yolculuk olacak ama değeceğine eminim.
+<<Açıkçası bu kovukta kalmayı hiç istememiştim.
+<<Bir an önce susup yola koyulsam iyi olacak.
+<<Kendine iyi bak.
+++15m||goingtocave
+
+::goingtocave
+<<Neredeyse oraya vardım.
+<<Geniş, ferah ve rahat bir gece beni bekliyor.
+<<Biraz saçmaladım sanırım değil mi?
+--angeraboutjoke=1
+<<En azından sabahki gibi gergin olmamdan iyidir.
+<<Hem...
+--
+<<Bu kadar saçma şeyin içine düşünde saçmalamamak elde değil.
+<<Daha fazla saçmalamadan yola devam etmeliyim.
+++15m||arrivecave
+
+::arrivecave
+<<Sonunda mağaraya varabldim.
+<<Rahat uykuma başlamadan önce...
+<<...teşekkür ederim.
+<<Her şey için. Sen olmasan belki bugünü atlatamazdım.
+<<İyi geceler.
+++300m||day2_cave
 
 ::gowithelder
-<<Yaşlı adam beni evine davet ediyor
-<<Onunla evine doğru gidiyorum
-<<Gittiğimde görüşürüz
-++40m||arriveeldershouse
+<<Bu adamla ilgili garip bir şeyler olduğuna eminim.
+<<Yine de tavsiyene uyacağım.
+<<Eğer uzun bir süre benden haber alamazsan...
+<<...organlarım çalınmış halde ormanın ücra bir köşesine atılmış ya da balıklara yem edilmiş olduğumu düşünebilirsin.
+<<Yine de düşünmesen daha iyi.
+<<İlk fırsatta sana ulaşacağım. Görüşürüz.
+++30m||goingwithelder
+
+::goingwithelder
+<<Hey.
+<<Sana bir iyi bir de kötü haberim var.
+<<İyi haber:
+<<Hayattayım.
+<<Kötü haber:
+<<Henüz gittiğimiz yere varamadık ve bu adam ağzını açıp bir kelime bile söylemiyor.
+<<Bir şeyden şüphelenmeden ona yetişsem iyi olacak.
+++20m||shouldtellaboutyou
+
+::shouldtellaboutyou
+<<Şu an fark ettim ki belki de adama senden bahsetsem işler daha kolay ilerleyebilir.
+<<Ancak yaklaşık 1 saattir tanıdığım birine özellikle de bu şartlar altında ne kadar güvenebilirim bilmiyorum.
+<<Bugün her şeyi sana sorduğumun farkındayım ama...
+<<Her neyse, bence de pek iyi bir fikir değildi.
+++15m||arriveeldershouse
 
 ::arriveeldershouse
-<<Bu adam delirmiş olmalılar
-<<Gerçekten
-<<Bana yarım saattir zaman yolculuğu yaptığımdan aslında aynı kaderi paylaştığımızdan
-<<Kısacası saçma sapan şeylerden bahsedip duruyor
-<<Söylediklerinin hiçbir anlamı yok
-<<Bana yardım etmek zorundasın dostum
-<<Buradan hemen kurtulmak istiyorum
-??Sakin ol ve biraz olgun davran||bemature
-??Evet biraz saçma geliyor olabilir ama belki de haklıdır||mayberight
+<<Ya bu adam delinin teki ya da ben.
+<<Ya da her ikimiz de. Belki de senin zihninin oyunlarıdır tüm bunlar.
+<<Zaten zamanda yolculuk gibi saçma bir şeyin başka bir açıklaması olamaz.
+<<Hem tüm bunların gerçek olduğuna kim inanır ki?
+--wenttoship=1
+<<Önce batmış olması gereken bir gemide modası geçmiş askerler.
+<<Sonra...
+--
+<<300 yıllık kıyafetleriyle dolaşan dilini bilmediğim köylüler...
+<<Belki de uyanamamışımdır, belki de denizin altında bayıldım ve rüya görüyorum.
+<<Belki deniz de yoktur, ne dersin?
+??Sakin ol.||staycalm
+??Tam olarak ne oldu?||whathappened
+
+::whathappened
+<<Ne mi oldu?
+<<Daha ne olabilir?
+<<Başıma gelmeyen kaldı mı ki, bir de şimdi bu adam çıktı.
+<<...
+<<...
+<<Daha sonra konuşsak iyi olacak.
+<<Sakinleşmeye ihtiyacım var.
+++20m||gotcalm
 
 ::mayberight
-<<Bilmiyorum dostum
-<<Söyledikleri çok anlamsız
-<<Nasıl zamanda yolculuk yapmış olabilirim
-<<Bunun mümkün olmadığını ikimiz de biliyoruz
-<<Öte yandan adada dilimizi bile bir tek o varmış gibi duruyor
-<<Bütün bunlara bir anlam veremiyorum
-<<En iyisi yatacak bir yer bulup bu işi yarına bırakmak
-??Yaşlı adamın yanında kalmaya ne dersin?||staywithelder
-??Ormanda mutlaka kalacak bir ağaç kovuğu bulabilirsin||stayinwoods
+<<Sakin?
+<<Evet şu an tek ihtiyacım olan bu.
+<<Sakinlik.
+<<Madem öyle...
+<<...sakinleştiğimde konuşuruz.
+++20m||gotcalm
 
-::bemature
-<<Söz konusu olanın ne olduğunun farkında değilsin sanırım
-<<Kim olduğunu bilmediğim insanların arasında...
-<<...nerede olduğumu bilmeden bir gün geçirdim
-<<Ve sen bana olgun davranmamı mı söylüyorsun?
-<<Yardım edecek misin yoksa sürekli bir şeyleri mi eleştireceksin?
-<<Hava karardı kalacak bir yerim dahi yok
-??Yaşlı adamın yanında kalmaya ne dersin?||staywithelder
-??Ormanda mutlaka kalacak bir ağaç kovuğu bulabilirsin||stayinwoods
-
-::stayinwoods
-<<Bunun iyi bir fikir olduğuna emin misin?
-<<Hava karardı ve ormana dair hiçbir şey bilmiyorum
-??Bir delinin yanında kalmaktansa neden olmasın?||gowoods
-??Haklısın belki de yaşlı adamla kalmalısın||staywithelder
-
-::gowoods
-<<Umarım şansım yaver gider ve sabah olduğunda sana ulaşabilecek durumda olurum
-<<Yoksa bu işin sonu pek iyi gözükmüyor
-++120m||dawnofday1_forest
+::gotcalm
+$$eldertoldeverything=1
+<<Tamam, şu an daha iyiyim ancak söyleyeceklerimi dinledikten sonra sen ne kadar iyi kalabileceksin bilmiyorum.
+<<Adamın söylediklerine göre gemide bir madalyon var, ki bu madalyon büyük ihtimalle cebimdeki madalyon, ve bu madalyon zamanda yolculuk yapmaya yarıyor.
+<<Eğlenceli değil mi?
+<<Daha garip olanı şu an 1692 senesinde olduğumuzu ve 1964'e dönmemiz gerektiğini söylüyor. Ben ise 1976'da doğdum.
+<<Eğer hikayesi doğruysa farklı zamanlardan aynı geçmişe yolculuk yaptık ve günümüze dönmenin tek yolu madalyon.
+<<Bu adama güveniyor musun? Ben söylediklerinde hiçbir mantık bulamıyorum.
+<<Geçirdiğim şoku düşünürsek benden iyi karar alacağına eminim.
+<<Sence adama güvenip burada mı kalmalıyım yoksa geceyi ormanda mı geçirmeliyim?
+??Adamla kal.||staywithelder
+??Ormana git.||safeinwoods
 
 ::staywithelder
-<<Burada kalmaktan başka şansım yok gibi görünüyor
-<<Yine de hala endişeleniyorum
-<<Sabah olduğunda burada olursun umarım
-<<Uyandığımda görüşürüz
-++120m||dawnofday1_elder
+<<Sana güveniyorum, ancak bu sefer önerin pek içime sinmedi.
+<<Gerçekten bu adama inanıyor musun?
+<<Madem öyle diyorsun, kabul, geceyi burada geçireceğim.
+<<Ama sabah olduğunda burada kalmak isteyeceğimi sanmıyorum.
+<<İyi geceler, her şey için teşekkürler.
+++360m||day2_elder
+
+::day2_cavity
+<<Hey! Orada mısın?
+<<Etrafımda bir sürü asker var. Bir şeyi ya da birini arıyor gibiler.
+--eldertoldeverything=1
+<<Hala inanmak istemiyorum ama yaşlı adamın dedikleri doğru gibi.
+<<Bu askerlerin kıyafetleri, silahları her şeyleri nereden baksan 300 yıl öncesinden.
+--
+<<Hala kovukta olduğum için beni fark ettiklerini sanmıyorum ancak ne kadar saklanabilirim bilmiyorum.
+<<Sence gitmelerini mi bekleyeyim yoksa ilk fırsatta kaçayım mı?
+??Gitmelerini bekle.||waitthemtogo
+??İlk fırsatta kaç.||escapewhenpossible
+
+::waitthemtogo
+<<Öyleyse kovuğumu sevmeye başlasam iyi olacak çünkü pek de gitmeye niyetli durmuyorlar.
+<<Daha fazla konuşmasak iyi olacak, gerekli olduğunda sana ulaşırım.
+++10m||iamgonnatalk
+
+::iamgonnatalk
+<<Neler oluyor hiçbir fikrim yok ama içimde garip bir his var.
+<<Anlaşabileceğimizden değil tabii ama dışarı çıkıp onlarla konuşmamak için kendimi zor tutuyorum.
+<<Daha önce hiç böyle hissetmemiştim. Sanki bir güç beni zorluyor.
+??Sakın dışarı çıkma.||dontgetout
+??Öyle bir şey yapma.||dontgetout
+
+::dontgetout
+<<Umarım biran önce buradan giderler.
+++15m||wentout
+
+::wentout
+<<Askerlerin arasında Ahmet'i gördüğüme yemin edebilirim.
+<<Orada diğerlerinin arasında onu görünce dayanamadım ve dışarı çıktım.
+--changedclothes=0
+<<Dalış kıyafetlerim kendilerine garip gelmiş olacak ki beni görünce fazlasıyla şaşırdılar.
+<<Pek kötü davrandıkları söylenemez ama beni bir yere götürüyorlar.
+--
+--changedclothes=1
+<<Önce beni köylülerden biri sandılar ama kendileriyle aynı dili konuşmadığımı anlayınca beni yanlarına aldılar ve bir yere götürüyorlar.
+--
+<<Nereye gittiğimize dair hiçbir fikrim yok belki de gemiye gidiyorduruz.
+<<Aralarında Ahmet'i gördüğüme hala inanamıyorum.
+<<Yakalanmadan önce telsizi kapatsam iyi olacak.
+++40m||beingtakentoship_woods
+
+::beingtakentoship_woods
+<<Doğru tahminde bulunmuşum. Bulunduğumuz yerden gemiyi açıkca görebiiyorum ama oraya varmak ne kadar sürer emin değilim.
+<<Bana ne yapacaklarına dair en ufak bir fikrim yok keşke seni dinleyebilseydim.
+++30m||takentoship
+
+::day2_elder
+<<Günaydın, umarım oradasındır.
+<<Sana uyuyacağımı söyleyip telsizimi kapattıktan sonra yaşlı adam bir şeyler daha anlattı.
+<<Hala pek inandığımı söyleyemem ama o da ekibiyle tarihin akışını değiştireceğine inandığı bir aletin peşine düşerek kendini burada bulmuş.
+<<Eğer madalyonu bulup kendi zamanına geri dönebilirse bir çok hayatı kuratarabileceğini iddia ediyor.
+<<Burada ne kadar süre geçirdiğini bilmiyorum ama pek de aklı yerinde değil gibi.
+<<Savaşa hazır olmam gerektiğini artık geri dönüş vaktinin geldiğini söyleyip uyudu.
+<<Kaç saattir uyuyor bilmiyorum ama henüz uyanmadı.
+<<Hala vaktim varken kaçıp kurtulabilirim bu adamdan.
+??Kaç ve ormana git.||escapetowoods
+??Uyanmasını bekle.||waitforhimtowake
+
+::escapetowoods
+<<Eşyalarımı toplayıp hemen çıkıyorum buradan.
+<<Hazır olduğumda haber veririm.
+++5m||readytogo
+
+::readytogo
+<<Tamamdır, her şey hazır ormana gidiyorum.
+<<Oradan da köye ya da gemiye giderim. Açıklığa kavuşturmamız gereken çok şey var.
+++30m||wentbacktowoods
+
+::wentbacktowoods
+<<Ormana ilerliyorum ama ne tarafa gideceğime henüz karar veremedim.
+<<Gittiğim yerde ne yapacağımı da bilmiyorum gerçi ama sence köye mi gideyim yoksa gemiye mi?
+??Gemiye git.||soldiersaround
+??Köye git.||soldiersaround
+
+::soldiersaround
+<<Hey!
+<<Etrafta askerler var. Beni fark ettiklerini sanmıyorum ama bir şey arıyor gibiler.
+<<Beni bulmaları an meselesi.
+<<İmkan bulunca seninle tekrar iletişime geçeceğim.
+++5m||caught
+
+::caught
+<<Yakalanmam beklediğimden çabuk oldu.
+<<Ancak pek saldırgan değiller.
+<<Üzerimi arama zahmetine girmediler.
+<<Sanırım beni gemiye götürüyorlar.
+<<Seninle kanuştuğum fark edilmeden telsizi kapatsam iyi olacak.
+++20m||beingtakentoship_elder
+
+::beingtakentoship_elder
+<<Doğru tahminde bulunmuşum, bulunduğumuz yerden gemiyi açıkça görebiliyorum.
+<<Bana ne yapacaklarına dair en ufak bir fikrim yok. Oraya vardığımda hala hayatta olursam haber vereceğim.
+++30m||takentoship
+
+::day2_cave
+<<Günaydın, dün olanların bir rüyadan ibaret olmasını isterdim ama uyandığımda kendimi yine aynı mağarada buldum.
+<<Kolay kolay umutsuzluğa kapılan bir insan değilim aslında ama gerçekten çaresiz bir şekilde uyandım.
+<<Ne yapacağım, buradan nasıl kurtulacağım hiç bilmiyorum.
+??Bir yolunu bulacağız.||wewillfindaway
+??Kurtulacaksın.||believe
+
+::wewillfindaway
+<<Sen olmasan ne yapardım bilemiyorum. Ben çaresizlik içerisinde ne yapacağımı bilmezken doğru seçimler yapmamı sağlıyorsun.
+<<Ve haklısın.
+<<Senin yardımlarınla buradan kurtulacağım.
+<<Önce hazırlanayım sonra ne yapacağıma karar veririz.
+++5m||readyup
+
+::believe
+<<Buradan kurtulmak için inançtan fazlasına ihtiyacım olacağını ikimiz de biliyoruz.
+<<Tabii inanmaktan başka da çarem yok. Oturup ölmeyi bekleyemem değil mi?
+<<Önce hazırlanayım, sonra da bugün neler yapacağıma karar verelim.
+++5m||readyup
+
+::readyup
+<<Tam hazırlandım sana haber vereyim diyordum ki birden yaşlı adam belirdi.
+<<Görünüşe göre atlatamamışım.
+<<Ne istediğini öğrenip sana döneceğim.
+--eldertoldeverything=0
+++15m||toldeverything
+--
+--eldertoldeverything=1
+++5m||hehasaplan
+--
+
+::hehasaplan
+<<Söylediğine göre madalyonu alıp tarihimize geri dönmek için bir planı varmış.
+<<Dün dediklerine hala tam olarak inandığım söylenemez ama buradan kurtulmanın tek yolu bu adamı dinlemek olabilir.
+<<Yine de buraya kadar seni dinleyerek geldim.
+??Adamı dinle.||listentoeldersplan
+??Adamı boş ver ve oradan uzaklaş.||findyourway
+
+::findyourway
+<<Pekala, yine seni dinlemekte bir sıkıntı göremiyorum.
+<<Sonuçta yaşlı adamı ona güvenecek kadar tanımıyorum.
+<<Eşyalarımı toplayıp köye doğru ilerleyeceğim.
+<<Belki yaşlı adamın planını tek başıma uygulayabilirim.
+<<Gerçi sana plandan bahsetmedim değil mi?
+<<Detaylarını o da anlatmadı ama askerlerin arasına sızıp gemiye girebileceğimizden bahsetti.
+<<Her neyse, acele etsem iyi olacak.
+++5m||readytogo_cave
+
+::readytogo_cave
+<<Eşyalarımı topladım fakat...
+<<...unuttuğumuz bir şey var ki ben bu insanlarla aynı dili konuşamıyorum.
+<<Yaşlı adam olmadan bu planı uygulayabilmemmin imkanı yok.
+<<Tek başıma gemiye sızamam.
+<<Ama o fırsatı da çoktan kaçırdık.
+<<Yine de köye gideceğim. Gidecek başka bir yer de yok zaten.
+++30m||goingtovillage_cave
+
+::goingtovillage_cave
+<<Keşke yaşlı adamın planını dinleseydik.
+<<Şimdiyi ne yapacağımı bilmeden köye yürüyor olmazdım.
+<<Ya beni yakalarlarsa?
+<<Ya öldürülürsem?
+<<Senin orada olduğun kadar rahat değilim burada.
+<<Belki de fazla tepki veriyorum kusura bakma.
+<<Ama çaresiz hissedince ne yapacağımı bilemiyorum.
+<<Yürümeye devam edip seninle sakinleşince konuşsam daha iyi olacak.
+++20m||aroundvillage
+
+::aroundvillage
+<<Sonunda köye varabildim.
+<<Biraz sıkıcı ve yorucu bir yolculuk oldu ama buradayım.
+<<Görünüşe göre askerler köye benden önce varmışlar.
+<<Belki köyün dışarıdan gözetleyerek ne yapmam gerektiği konusunda bir fikre sahip olabilirim.
+<<Başka parlak bir fikrin olduğunu sanmıyorum.
+<<O yüzden hoşçakal. Bir şey olursa haber vereceğim.
+++15||spottedbysoldiers
+
+::spottedbysoldiers
+<<Benim fikrim de pek parlak değilmiş.
+<<Köyü gözetlerken askerlerden biri beni fark etti ve kaçmaya başladım.
+<<Ve tabii ki onlar da peşimden geliyorlar.
+<<Ne kadar kaçabilirim bilmiyorum.
+<<Susup koşmaya odaklansam daha iyi olacak.
+++10m||caught
+
+::listentoeldersplan
+<<Aynı fikirde olmamız güzel.
+<<Adamın planını dinledikten sonra sana danışacağım.
+++10m||toldtheplan
+
+::toldtheplan
+<<Muhteşem planımızı anlatıyorum, hazır mısın?
+<<Yaşlı adamın dediğine göre askerler haftada bir köye geliyorlar.
+<<Bugün de o günlerden biri.
+<<Eğer planı düzgün bir şekilde uygulayabilirsek, iki askerin kıyafetlerini çalıp gemiye sızacağız.
+<<Geriye madalyonu ve işe yarayacağı doğru noktayı bulmak kalıyor.
+<<Ancak şöyle bir sorun var ki...
+<<...madalyon bende.
+<<Sence bunu adama söylemeli miyim? Yoksa gemiye kadar bunu saklamalı mıyım?
+??Saklasan daha iyi.||betterhide
+??Söylemelisin.||tellthetruth
+
+::tellthetruth
+$$toldelderaboutmedallion=1
+<<Umarım sonu umduğum gibi olur.
+<<Köye doğru ilerlerken bundan bahsedeceğim.
+<<Yaşlı adamla konuşup planı uygulamaya koyulsak iyi olacak.
+<<Gelişmelerden seni de haberdar edeceğim.
+++30m||goingtovillage_cave
+
+::betterhide
+<<Umarım bunu saklamak işime yarar.
+<<Gemiye vardığımızda bunu öğrenince pek mutlu olacağını sanmıyorum.
+<<Her neyse, planı uygulamaya koyulsak iyi olacak.
+<<Gelişmelerden seni haberdar edeceğim.
+++30m||goingtovillage_cave
+
+::goingtovillage_cave
+--toldelderaboutmedallion=1
+<<Köye vardık sayılır ama yaşlı adama hala madalyondan bahsedemedim.
+<<Ne diyeceğime dair hiçbir fikrim yok. Bu kadar stres yapmamalıyım belki de biliyorum ama yine beceremiyorum.
+--
+--toldelderaboutmedallion=0
+<<Köye vardık sayılır.
+<<Madalyonu ondan saklamak ne kadar doğru hala bilmiyorum.
+--
+<<Gemiye girmeyi başardığımızda neler olacak onu da bilmiyorum.
+<<Kendimi bu kadar gizemin ve çıkmazın içinde bulunca aptallaştım sanırım.
+<<Normalde böyle biri değilim.
+<<Çocuk gibi bir köşe geçip her şeyi bitmesini beklemek istiyorum.
+<<Öyle bir imkanım olmadığını biliyorum tabii.
+<<...
+<<Gevezelik etmesem iyi olacak.
+<<Dediğim gibi neredeyse köye vardık.
+--toldelderaboutmedallion=1
+<<Oraya varmadan madalyondan bahsetsem iyi olacak.
+--
+<<Gittiğimizde haber veririm.
+++10m||arrivevillage_cave
+
+::arrivevillage_cave
+--medalliontold=1
+<<Sonunda madalyondan bahsettim. Beklediğim gibi bir tepki vermedi.
+<<Planımızda pek bir değişiklik yok gibi gözüküyor.
+--
+<<Köyün dışarısından askerleri gözetliyoruz.
+<<Gerçekten de bir filmin içerisinde gibi hissetmeye başladım.
+<<Askerlerden kıyafetlerini nasıl alacağımıza dair hiçbir fikrim yok.
+<<Umarım işler yolunda gider.
+++20m||disguised
+
+::disguised
+<<A.. az önce olanlar...
+<<Bu adam çıldırmış olmalı.
+<<Gözlerimin önünde iki askeri öldürdü, şimdi de kıyafetlerini giymemi bekliyor.
+<<Buradan kurtulmak için ne gerekiyorsa yaparım diyordum kendime ancak...
+<<Sakin olmalıyım, eğer yaşlı adamın dedikleri doğruysa ve planı uygulayabilirsek yarın evime dönmüş olacağım.
+<<Biran önce kurtulmak istiyorum bu kabustan.
+<<Kıyafetlerimizi değiştirip yaşlı adamın sığınağına geri döneceğiz.
+<<Gelişmelerden haberdar ederim.
+++15m||goingback
+
+::goingback
+<<Yarım saat önce öldüğünü bildiğim birinin kıyafetlerini giymek iğrenç bir duygu.
+<<Böyle bir şey yapmak zorunda kaldığıma inanamıyorum.
+<<Yaşlı adam bir sonraki hamlemizi planlamak için sığınağına dönmemiz gerektiğini söyledi.
+<<Şu an yola çıktık ama geri dönmek ne kadar sürer bilmiyorum.
+<<Vardığızda haber versem iyi olacak.
+++40m||arrivesanctuary
+
+::arrivesanctuary
+<<Sığınağa geldik.
+<<Buradan geminin gözüktüğünü fark etmemiştim.
+<<Yaşlı adam burayı özellikle seçmiş olmalı. Zor da olsa köy bile gözüküyor.
+<<Gün batımına kadar burada bekleyeceğiz ve hava karardığında gemide olmak üzere yola çıkacağız.
+<<O zamana kadar biraz dinlensem iyi olacak.
+<<Bir kaç saat sonra görüşürüz.
+++120m||rest
+
+::rest
+<<Hey!
+<<Orada mısın?
+<<Hiç beklemediğimiz bir şey oldu. Korsanlar gemiye saldırıyor.
+<<Askerlerin hazırlıksız yakalanmış gibi bir halleri var. Eğer gemiyi ateşe verirlerse tüm şansımızı kaybedebiliriz.
+<<Yine de planımızı uygulamak gibi bir ihtimal kalmadı.
+<<Şimdi ne yapacağım ben? Nasıl geri döneceğim?
+<<Ya sonsuza dek burada kalırsam?
+<<Bir süre sonra telsizin pili de bitecek. Dilini bilmediğim insanların arasında bir başıma kalacağım.
+<<Ne olduğunu bilmediğimiz bir cihaz uğruna o dalışı yapmamalıydık.
+<<Kim bilir ekibimdekiler şu an ne durumdadır.
+++10m||screams
+
+::screams
+<<Köye de saldırmış olmalılar.
+<<Köyden, ormandan, her yerden çığlıklar geliyor.
+<<İnsanların bu kadar iğrençleşebildiğini görmek...
+<<Bütün umudumu kaybetmiş durumdayım.
+<<Geceyi tüm bunları izleyerek geçirmek zorunda olmak daha da kötü.
+<<Keşke tüm bunlar bir rüyadan ibaret olsaydı.
+++15m||tellthestory
+
+::tellthestory
+<<Orada mısın?
+<<Belki seninle konuşmak sakinleşmeme yardımcı olabilir.
+<<Aslında yaptığımız dalışların hiçbiri tesadüf değildi.
+<<İki yıl öncesinde tüm insanlığın kaderini değiştirebilecek bir cihazın varlığından söz eden belgeler bulduk.
+<<Yazılanlara göre cihaz çok eski tarihlerde yapılmış olmasına rağmen çok yüksek teknoloji sunuyordu.
+<<Eğer bu cihazı bulabilirsek ve gerekli yerlerle anlaşmalar yaparsak hem insanlık adına iyi bir şeyler başarırız hem de zengin oluruz diye düşünmüştük.
+<<Ama yemin ederim ki aradığımız şeyin bu madalyon olduğunu ve bu tür güçleri olduğunu bilmiyordum.
+<<Başıma bunların geleceğini bilsem madalyonun peşine hiç düşmezdim.

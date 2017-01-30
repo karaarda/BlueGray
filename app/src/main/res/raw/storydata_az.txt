@@ -4,140 +4,168 @@ $$shiptold=0
 $$medalliontold=0
 $$trust=1
 $$wenttoship=0
+$$angeraboutjoke=0
 <<[Bağlantı kuruluyor]
 <<[Çağrı başlatılıyor]
 ||launch
 
 ::launch
-<<Merhaba
+<<Hey!
 <<Orada kimse var mı?
 <<Beni duyabiliyor musunuz?
-??Evet, duyuyorum||hear
+??Evet, duyuyorum.||hear
 ??Sen de kimsin?||whoareyou
 
 ::hear
-<<Sonunda birine ulaşabildim
-<<Saatlerdir bu aletle uğraşıyorum
-<<Bir türlü çalıştırmayı başaramamıştım
+<<Sonunda birine ulaşabildim.
+<<Saatlerdir bu aletle uğraşıyorum.
+<<Bir türlü çalıştırmayı başaramadım.
 ??Sen kimsin?||whoareyou
 ??Bundan bana ne?||whatmatter
 
 ::whoareyou
 $$nametold=1
-<<Sanırım önce bununla başlamalıydım
-<<Benim adım Hasan
-<<Ekibimle batık bir gemiye dalış yaparken bir anda kendimi burada buldum
+<<Sanırım önce bununla başlamalıydım.
+<<Benim adım Hasan.
+<<Ekibimle batık bir gemide araştırma yapıyorduk.
+<<Sonra bir anda gözüm karardı...
+<<...ve kendimi burada buldum.
 --medalliontold=0
 $$medalliontold=1
-<<Ve yanımda bu telsiz ve uyanınca bulduğum bir madalyon dışında hiçbir şey yok
-<<Bana yardım etmelisin
+<<Yanımda bu telsiz ve uyanınca bulduğum bir madalyon dışında hiçbir şey yok.
 --
+<<Bayılmış olmalıyım ancak tüm hepsinin bir kaç saniye içinde gerçekleştiğine yemin edebilirim.
 ??Nerede olduğunu bilmiyor musun?||whereareyou
 ??Sakin ol ve bana gemiden bahset||telltheship
 
 ::whatmatter
 $$medalliontold=1
-<<Senden başka ulaşabileceğim kimse yok
-<<Yanımda sadece bu telsiz ve kıyıda bulduğum bir madalyon var
-<<Bana yardım etmek zorundasın
+<<Saatlerdir uğraşıyorum ve bir tek sana ulaşabildim.
+<<Yanımda sadece bu telsiz ve kıyıda bulduğum bir madalyon var.
+<<Ne yapmam gerektiğine dair hiçbir fikrim yok.
+<<Ve inan bana, bana yardım edebilecek tek kişi sensin.
 ??Tamam ama sen de kimsin?||whoareyou
 ??Sen kendinde misin?||areyouhigh
 
 ::areyouhigh
 $$nametold=1
-<<Kendimi anlatamadım sanırım
-<<Şu an şaka yapmıyorum
-<<Bak, baştan anlatacağım
+<<Kendimi anlatamadım sanırım.
+<<Şu an şaka yapmıyorum.
+<<Tamam, saçma geliyor olabilir evet ama yardıma ihtiyacım var.
+<<Bak, baştan anlatacağım.
 <<Adım Hasan ve en son hatırladığım şey...
-<<...ekibimle batık bir gemiye dalış yaptığımız
-<<Uyandığımda kendimi burada buldum
-<<Saatlerdir birine ulaşmaya çalışıyorum ve ulaşabildiğim tek insan sensin
-??Nerede olduğunu bilmiyor musun yani?||whereareyou
-??Tamam sakin ol ve bana şu gemiden bahset||telltheship
+<<...ekibimle batık bir gemiye dalış yaptığımız.
+<<Dalış sırasında gözüm karardı ve kendimi bir anda burada buldum.
+<<Biliyorum bana da mantıksız geliyor tüm bu olanlar.
+<<Ancak saatlerdir birine ulaşmaya çalışıyorum ve ulaşabildiğim tek insan sensin.
+??Nerede olduğunu bilmiyor musun?||whereareyou
+??bana şu gemiden bahset.||telltheship
 
 ::telltheship
 $$shiptold=1
-<<1700lerde battığı tahmin edilen bir gemi
-<<Ekibimle uzun süredir bu tür dalışlar yapıyoruz
-<<Batık gemilere girip gemiyi ve batış sebebini inceliyoruz
-<<Aslına bakarsan ileride demir atmış bir gemi var...
-<<...ve 1700lerden kalmış gibi duruyor
+<<1700lerde battığı bilinen bir gemi.
+<<Değerli şeyler bulabilmek umuduyla ekibimle uzun süredir bu tür dalışlar yapıyoruz.
+<<Batık gemilere girip gemiyi araştırıyoruz ve değerli gördüğümüz şeyleri topluyoruz.
+<<Şimdiye kadar pek başarılı olduğumuz söylenemez tabii.
+<<Aslına bakarsan...
+<<kıyıda demir atmış bir gemi var ve 1700lerden kalmış gibi duruyor...
+<<hatta dalış yaptığımız gemiyle aynı diyebilirim.
 ??Peki nerede olduğuna dair bir fikrin var mı?||whereareyou
 ??Gemide ne arıyordunuz?||whatyousearch
 
 ::whereareyou
-<<Nerede olduğuma dair hiçbir fikrim yok
+<<Dalış yaptığımız gemi Cebelitarık açıklarındaydı ancak şu an nerede olduğuma dair bir fikrim yok.
 --shiptold=1
 <<İleride bahsettiğim gemi, dağın eteklerindeyse bir köy var
 --
 --shiptold=0
+$$shiptold=1
 <<İleride demir atmış bir gemi...
-<<...dağın eteklerindeyse bir köy var
-<<Gemi araştırmak için dalış yaptığımız gemiye çok benziyor
+<<...dağın eteklerindeyse bir köy var.
+<<Gemi araştırmak için dalış yaptığımız gemiye çok benziyor.
 --
-<<Hava kararıyor dostum
+<<Hava kararıyor dostum.
+<<Bir yerlere doğru ilerlesem iyi olacak, geceyi burada geçirmek istediğimi sanmıyorum.
+<<Gemiye gidersem belki ekibimdeki diğer insanları bulabilirim.
+<<Öte yandan köyde bana yardım edecek birilerini bulmam muhtemel.
 <<Sence hangi tarafa doğru gitmeliyim?
-??Köye gitmek mantıklı görünüyor, belki yardımcı olacak birini bulabilirsin||gotovillage
-??Gemiye doğru yol al, belki ekibindeki diğer insanları bulabilirsin||gotoship
+??Köye gitmek mantıklı görünüyor||gotovillage
+??Gemiye doğru yol al||gotoship
 
 ::gotovillage
 --wenttoship=1
-<<Bu adamlar sorun çıkaracak gibi görünüyor
+<<Ekiptekilerin orada olmadıklarını umuyorum. Eğer oradalarsa onları orada bırakmak iyi bir fikir mi?
+<<Orada olsam da yardımcı olamazdım gerçi değil mi?
+<<Tamam, haklısın.
 --
-<<Sana güveniyorum
-<<Köye vardığımda haber vereceğim
-++30m||arrivevillage
+<<Sana güveniyorum.
+<<Köye vardığımda haber vereceğim.
+++15m||goingtovillage
+
+::goingtovillage
+--angeraboutjoke=1
+<<Biraz gereksiz tepki verdim sanırım.
+<<Daha sakin olsam iyi olacak, ancak kendimi izlediğimiz filmlerden birinin içinde bulunca duruma alışmak biraz zor oldu.
+--
+<<Aslına bakarsan bulunduğum yer fazlasıyla güzel.
+<<Neler olup bittiğini öğrendikten sonra bunu bir tatil olarak değerlendirebilirim.
+<<Tabii hayatta olursam.
+++20m||arrivevillage
 
 ::gotoship
-<<Biraz ürkütücü bir fikir ama sana güveniyorum
-<<Gemiye vardığımda haber vereceğim
-++30m||arriveship
+<<Tamam, hemen yola çıkıyorum ancak haberin olsun gemi epey uzakta.
+<<Oraya vardığımda haber vereceğim.
+++15m||goingtoship
+
+::goingtoship
+<<Biliyor musun, dalış kıyafetleri içerisinde dakikalarca yürümek pek de mantıklı değilmiş.
+<<Ancak başka bir yere gitme fikri benimdi değil mi?
+<<Her neyse, yola devam etsem iyi olacak.
+<<Zaten başka şansım da yok gibi.
+++20m||arriveship
 
 ::arriveship
-<<Ne gördüğüme inanmayacaksın
-<<Sahilde, geminin yakınında, korsanlar var
-<<Yani filmlerde gördüklerimiz gibi
-<<Nereye geldim ben böyle
-<<Neler oluyor burada
-??Bilemiyorum, belki "korsanlarla" konuşmayı deneyebilirsin||talktopirates
-??Oradan uzaklaşsan iyi olabilir, belki de köye dönmek daha iyi bir fikirdir.||gotovillage
+$$wenttoship=1
+<<Ne gördüğüme inanmayacaksın.
+<<Güvertede bir çok insan var, garip kısmı ise hepsi korsan kıyafetleri giymiş durumdalar.
+<<Yani filmlerde gördüklerimiz gibi.
+<<Nereye geldim ben böyle? Neler oluyor burada?
+<<Şimdi ne yapacağım? Köye dönmek için çok mu geç?
+??"Korsanlarla" konuşmayı deneyebilirsin||talktopirates
+??Köye dönmek iyi bir fikirdir.||gotovillage
 
 ::talktopirates
 <<Ne dediğinin farkında mısın?
-<<Bu adamların 	benimle dostça konuşacağını mı sanıyorsun
-<<Beni hayatta tutmak istediğine emin misin?
-??Sakin ol biraz, senin gördüklerini ben göremiyorum||notinyourpov
-??Biliyor musun, bence delinin tekisin||youarecrazy
+<<Bu adamlar benimle dostça konuşacak gibi durmuyor ve oraya gitmeye pek de niyetim yok.
+??Seninle aynı şeyleri göremiyorum.||notinyourpov
+??Şakaydı||itisajoke
 
 ::notinyourpov
-<<Evet
-<<Haklısın
-<<Özür dilerim
+<<Evet.
+<<Haklısın.
+<<Özür dilerim.
 <<Ancak bütün bu olanlar...
-<<Ne olduğunu hatırlamamam...
+<<Kendimi birden başka bir yerde bulmam...
 <<Bulduğum o madalyon...
-<<Gerçekten hepsi çok anlamsız
-<<Bir anda kendimi bilinmezlerin ortasında buldum
-<<Ve tanımadığım birinden yardım bekliyorum
+<<Gerçekten hepsi çok anlamsız.
+<<Bir anda kendimi bilinmezlerin ortasında buldum.
+<<Ve tanımadığım birinden yardım bekliyorum.
 ++5m||bettergovillage
 
 ::bettergovillage
-<<Afedersin, öyle demek istemedim ancak
-<<Bilmiyorum
-<<Anla işte
-<<Köye döndüğümde konuşsak daha iyi olabilir
-<<Yola çıkıyorum
+<<Afedersin, öyle demek istemedim ancak...
+<<...bilmiyorum.
+<<Anla işte.
+<<Köye döndüğümde konuşsak daha iyi olabilir.
+<<Yola çıkıyorum.
 ++15m||arrivevillage
 
-::youarecrazy
-<<Deli mi? Ciddi misin?
-<<Tüm bunları uydurduğumu mu sanıyorsun?
-<<Bana yardım edebilecek tek insan sensin ve sen de bana deli diyorsun
-<<Harika, gerçekten
-<<Daha önce hiç bu kadar iyi hissetmemiştim
-<<Zaten sana ihtiyacım olduğunu nereden çıkardım ki
-<<Kendi başımın çaresine bakarım
-++30m||end_
+::itisajoke
+$$angeraboutjoke=1
+<<Komik olmadığını fark etmişsindir umarım.
+<<Pek de şaka yapılacak bir durumda olduğumu sanmıyorum.
+<<Her neyse, köye dönüyorum. Umarım orada bir şeyler bulabilirim.
+++20m||goingtovillage
 
 ::arrivevillage
 <<Köye vardım

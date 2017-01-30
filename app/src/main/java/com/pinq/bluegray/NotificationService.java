@@ -19,6 +19,8 @@ import com.pinq.bluegray.ui.StateHandler;
 
 import org.greenrobot.eventbus.EventBus;
 
+import java.util.HashMap;
+
 /**
  * Created by Arda on 7.01.2017.
  */
@@ -45,6 +47,7 @@ public class NotificationService extends Service {
             PreferenceHandler.setLastState(this, state.mNextState);
 
             State nextState = ItemProvider.getInstance(this).loadStateData(this, state.mNextState);
+            nextState.mVariables = (HashMap<String, String>) state.mVariables.clone();
             StateHandler handler = new StateHandler(this, nextState, null);
 
             ParseListener listener = new NotificationParseListener(this, nextState);

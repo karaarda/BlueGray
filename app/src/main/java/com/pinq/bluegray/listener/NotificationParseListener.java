@@ -22,6 +22,7 @@ import com.pinq.bluegray.data.PreferenceHandler;
 import com.pinq.bluegray.data.State;
 import com.pinq.bluegray.ui.StateHandler;
 
+import java.util.Date;
 import java.util.HashMap;
 
 /**
@@ -60,30 +61,34 @@ public class NotificationParseListener implements ParseListener{
 
         delayData[0] = delayData[0].substring(0, delayData[0].length()-1);
 
-        long delay = Integer.parseInt(delayData[0]) * 1000 * 60;
+        long delay = Integer.parseInt(delayData[0]) * 1000; //TODO * 60 to make it minutes
 
         delayState.mRaw = "::" + delayState.mName + "\n<<" + mContext.getString(R.string.busy);
         delayState.mDueDate = System.currentTimeMillis() + delay;
         delayState.mDelayedNextState = delayData[1];
+        delayState.mVariables = (HashMap<String, String>) mState.mVariables.clone();
 
         Intent intent = new Intent(mContext, NotificationService.class);
         PendingIntent pintent = PendingIntent.getService(mContext, 0, intent, 0);
 
         AlarmManager alarm = (AlarmManager) mContext.getSystemService(Context.ALARM_SERVICE);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            alarm.setExact(AlarmManager.RTC, System.currentTimeMillis() + 1000 * 10, pintent);
+//            alarm.setExact(AlarmManager.RTC, System.currentTimeMillis() + 1000 * 10, pintent);
+            alarm.setExact(AlarmManager.RTC, delayState.mDueDate, pintent); //TODO change second argument for debugging
         } else {
-            alarm.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + 1000 * 10, pintent);
+//            alarm.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + 1000 * 10, pintent);
+            alarm.set(AlarmManager.RTC_WAKEUP, delayState.mDueDate, pintent);
         }
 
         mState.mNextState = delayState.mName;
 
         PreferenceHandler.saveState(mContext, delayState);
-
         PreferenceHandler.saveState(mContext, mState);
 
         StateHandler handler = new StateHandler(mContext, delayState, null);
         handler.parse(delayState.mRaw.split(System.getProperty("line.separator")), this);
+
+        PreferenceHandler.setLastState(mContext, delayState.mName);
     }
 
     @Override
@@ -132,6 +137,7 @@ public class NotificationParseListener implements ParseListener{
         mBuilder.setContentTitle(mContext.getString(R.string.app_name));
         mBuilder.setContentText(mNotification);
         mBuilder.setStyle(new NotificationCompat.BigTextStyle().bigText(mNotification));
+        mBuilder.setGroup("blue-gray");
         mBuilder.setAutoCancel(true);
 
         mBuilder.setColor(mContext.getResources().getColor(R.color.bluegray));
@@ -146,6 +152,8 @@ public class NotificationParseListener implements ParseListener{
 
         NotificationManager mNotificationManager = (NotificationManager) mContext.getSystemService(Context.NOTIFICATION_SERVICE);
 
-        mNotificationManager.notify(0, mBuilder.build());
+        int id = (int) ((new Date().getTime() / 1000L) % Integer.MAX_VALUE);
+
+        mNotificationManager.notify(id, mBuilder.build());
     }
 }

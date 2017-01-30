@@ -2,6 +2,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:sothree="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
     android:gravity="bottom"
     sothree:umanoShadowHeight="0dp"
     sothree:umanoPanelHeight="50dp"
@@ -12,7 +13,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/paperbackground2">
+        android:background="@drawable/paperbackground">
 
         <android.support.v7.widget.RecyclerView
             android:padding="30dp"

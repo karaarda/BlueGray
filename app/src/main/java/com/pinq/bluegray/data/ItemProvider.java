@@ -62,7 +62,7 @@ public class ItemProvider {
 
         nextState.mPreviousState = state.mName;
         nextState.mVariables = (HashMap<String, String>) state.mVariables.clone();
-        new StateHandler(mContext, nextState, game).populate(false); //TODO change to true before release
+        new StateHandler(mContext, nextState, game).populate(true); //TODO change to true before release
 
         if(nextState.mNextState == null)
             PreferenceHandler.setLastState(mContext, nextState.mName);

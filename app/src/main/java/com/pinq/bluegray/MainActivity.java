@@ -11,9 +11,11 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.Window;
+import android.view.WindowManager;
 import android.widget.RelativeLayout;
 
 import com.pinq.bluegray.data.PreferenceHandler;
+import com.sothree.slidinguppanel.SlidingUpPanelLayout;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,6 +25,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         setContentView(R.layout.activity_main);
 
         mMessages = (RecyclerView) findViewById(R.id.list);
@@ -72,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.change_lang).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Dialog dialog = new Dialog(MainActivity.this);
+                final Dialog dialog = new Dialog(MainActivity.this);
                 dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
                 dialog.setContentView(R.layout.change_lang);
                 dialog.getWindow().setLayout(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
@@ -100,6 +106,8 @@ public class MainActivity extends AppCompatActivity {
                     public void onClick(View view) {
                         PreferenceHandler.setLanguage(MainActivity.this, "en");
                         ((GameAdapter)mMessages.getAdapter()).languageChanged();
+                        dialog.dismiss();
+                        ((SlidingUpPanelLayout)findViewById(R.id.root)).setPanelState(SlidingUpPanelLayout.PanelState.COLLAPSED);
                     }
                 });
                 dialog.findViewById(R.id.turkish).setOnClickListener(new View.OnClickListener() {
@@ -107,6 +115,8 @@ public class MainActivity extends AppCompatActivity {
                     public void onClick(View view) {
                         PreferenceHandler.setLanguage(MainActivity.this, "tr");
                         ((GameAdapter)mMessages.getAdapter()).languageChanged();
+                        dialog.dismiss();
+                        ((SlidingUpPanelLayout)findViewById(R.id.root)).setPanelState(SlidingUpPanelLayout.PanelState.COLLAPSED);
                     }
                 });
                 dialog.findViewById(R.id.german).setOnClickListener(new View.OnClickListener() {
@@ -114,6 +124,8 @@ public class MainActivity extends AppCompatActivity {
                     public void onClick(View view) {
                         PreferenceHandler.setLanguage(MainActivity.this, "de");
                         ((GameAdapter)mMessages.getAdapter()).languageChanged();
+                        dialog.dismiss();
+                        ((SlidingUpPanelLayout)findViewById(R.id.root)).setPanelState(SlidingUpPanelLayout.PanelState.COLLAPSED);
                     }
                 });
                 dialog.findViewById(R.id.azerbaijani).setOnClickListener(new View.OnClickListener() {
@@ -121,8 +133,22 @@ public class MainActivity extends AppCompatActivity {
                     public void onClick(View view) {
                         PreferenceHandler.setLanguage(MainActivity.this, "az");
                         ((GameAdapter)mMessages.getAdapter()).languageChanged();
+                        dialog.dismiss();
+                        ((SlidingUpPanelLayout)findViewById(R.id.root)).setPanelState(SlidingUpPanelLayout.PanelState.COLLAPSED);
                     }
                 });
+            }
+        });
+
+        ((SlidingUpPanelLayout)findViewById(R.id.root)).addPanelSlideListener(new SlidingUpPanelLayout.PanelSlideListener() {
+            @Override
+            public void onPanelSlide(View panel, float slideOffset) {
+                findViewById(R.id.dumen).setRotation(360*slideOffset);
+            }
+
+            @Override
+            public void onPanelStateChanged(View panel, SlidingUpPanelLayout.PanelState previousState, SlidingUpPanelLayout.PanelState newState) {
+
             }
         });
     }
