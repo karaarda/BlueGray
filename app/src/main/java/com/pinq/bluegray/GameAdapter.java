@@ -60,7 +60,7 @@ public class GameAdapter extends RecyclerView.Adapter {
         public void run() {
             while (true)
                 if (mAnimating) try {
-                    mAnimator.sleep(50);
+                    mAnimator.sleep(100);
                     mAlpha += 0.10f;
 
                     mActivity.runOnUiThread(new Runnable() {
@@ -72,7 +72,16 @@ public class GameAdapter extends RecyclerView.Adapter {
                         }
                     });
 
-                    if(mAlpha >= 2){
+                    float alpha;
+
+                    if(mAddingList.get(mLastAdded == -1 ? 1 : mLastAdded) instanceof Message)
+                        alpha = 1.2f + ((Message)mAddingList.get(mLastAdded == -1 ? 1 : mLastAdded)).mText.length() / 40f;
+                    else
+                        alpha = 1;
+
+                    Log.e("alpha", alpha + "");
+
+                    if(mAlpha >= alpha){
                         mAlpha = 0;
                         mAnimatedView = null;
 
